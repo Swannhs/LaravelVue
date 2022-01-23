@@ -1,20 +1,15 @@
-import ExampleComponent from "./components/ExampleComponent";
 import VueRouter from "vue-router";
-import SecondComponent from "./components/SecondComponent";
+import Bookables from "./bookables/Bookables";
 
 const routes = [
     {
         path: '/',
-        component: ExampleComponent
-    },
-    {
-        path: '/home',
-        component: SecondComponent
+        component: Bookables
     }
 ]
 
 const router = new VueRouter({
-    routes,
+    routes, // routes: routes, is same
     mode: 'history'
 })
 
