@@ -1,6 +1,6 @@
 <template>
 <div>
-    <BookableListItem title="This is title" content="This is a dummy content"></BookableListItem>
+    <BookableListItem title="This is title" content="This is a dummy content" :price="10"></BookableListItem>
 </div>
 </template>
 

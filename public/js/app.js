@@ -5250,9 +5250,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "BookableListItem",
-  props: ['title', 'content']
+  props: {
+    'title': String,
+    'content': String,
+    'price': Number
+  }
 });
 
 /***/ }),
@@ -28041,6 +28046,8 @@ var render = function () {
     _c("h1", [_vm._v(_vm._s(_vm.title))]),
     _vm._v(" "),
     _c("p", [_vm._v(_vm._s(_vm.content))]),
+    _vm._v(" "),
+    _c("span", [_vm._v(_vm._s(_vm.price))]),
   ])
 }
 var staticRenderFns = []
@@ -28070,7 +28077,11 @@ var render = function () {
     "div",
     [
       _c("BookableListItem", {
-        attrs: { title: "This is title", content: "This is a dummy content" },
+        attrs: {
+          title: "This is title",
+          content: "This is a dummy content",
+          price: 10,
+        },
       }),
     ],
     1
