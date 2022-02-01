@@ -1,10 +1,11 @@
 import VueRouter from "vue-router";
-import Bookables from "./bookables/Bookables";
+import Home from "./pages/Home";
+
 
 const routes = [
     {
         path: '/',
-        component: Bookables
+        component: Home
     }
 ]
 
