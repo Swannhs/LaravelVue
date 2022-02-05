@@ -10,6 +10,7 @@
           :name="friend.name"
           :phone=friend.phone
           :email="friend.email"
+          @toggle-parent="toggleParentStatus"
       ></friend-contact>
     </ul>
   </section>
@@ -35,6 +36,11 @@ export default {
       ],
     };
   },
+  methods: {
+    toggleParentStatus(){
+      alert('This is called from child')
+    }
+  }
 };
 </script>
 

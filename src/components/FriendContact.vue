@@ -1,6 +1,7 @@
 <template>
   <li key="id">
     <h2>{{ name }}</h2>
+    <button @click="toggleParent">Call Parent</button>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
     <ul v-if="detailsAreVisible">
       <li>
@@ -18,10 +19,6 @@
 <script>
 export default {
   props: {
-    id: {
-      type: String,
-      required: true
-    },
     name: {
       type: String,
       required: true
@@ -54,6 +51,9 @@ export default {
   methods: {
     toggleDetails() {
       this.detailsAreVisible = !this.detailsAreVisible;
+    },
+    toggleParent() {
+      this.$emit("toggle-parent")
     }
   }
 };
