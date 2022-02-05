@@ -37,8 +37,8 @@ export default {
     };
   },
   methods: {
-    toggleParentStatus(){
-      alert('This is called from child')
+    toggleParentStatus(name){
+      alert(`${name} is called from child`)
     }
   }
 };

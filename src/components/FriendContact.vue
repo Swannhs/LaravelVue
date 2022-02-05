@@ -53,7 +53,7 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleParent() {
-      this.$emit("toggle-parent")
+      this.$emit("toggle-parent", this.name)
     }
   }
 };
