@@ -7,13 +7,13 @@
       <friend-contact
           id="manuel"
           name="Manuel Lorenz"
-          phone="0123 45678 90"
+          :phone=12345678902
           email="manuel@localhost.com"
       ></friend-contact>
       <friend-contact
           id="jeba"
           name="jeba"
-          phone="2166 54332 22"
+          :phone=21665433222
           email="jeba@localhost.com"
       ></friend-contact>
     </ul>

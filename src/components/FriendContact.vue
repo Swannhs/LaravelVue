@@ -17,12 +17,29 @@
 
 <script>
 export default {
-  props: [
-      'id',
-      'name',
-      'phone',
-      'email'
-  ],
+  props: {
+    id: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    phone: {
+      type: Number,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    },
+    isFavorite: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
   data() {
     return {
       detailsAreVisible: false,
