@@ -27,7 +27,7 @@ export default {
       required: true
     },
     phone: {
-      type: Number,
+      type: String,
       required: true
     },
     email: {
