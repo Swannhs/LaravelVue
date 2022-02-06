@@ -11,6 +11,7 @@
           :phone=friend.phone
           :email="friend.email"
           @toggle-parent="toggleParentStatus"
+          @delete-friend="deleteFriend"
       ></friend-contact>
     </ul>
   </section>
@@ -33,12 +34,21 @@ export default {
           phone: "0987 654421 21",
           email: "julie@localhost.com",
         },
+        {
+          id: 'jeba',
+          name: 'Jeba',
+          phone: "1234 345653 33",
+          email: "jeba@loclhost.com"
+        }
       ],
     };
   },
   methods: {
     toggleParentStatus(name){
       alert(`${name} is called from child`)
+    },
+    deleteFriend(name){
+      this.friends = this.friends.filter(friend => friend.name !== name)
     }
   }
 };

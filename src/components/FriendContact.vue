@@ -3,6 +3,7 @@
     <h2>{{ name }}</h2>
     <button @click="toggleParent">Call Parent</button>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
+    <button @click="$emit('delete-friend', name)">Delete</button>
     <ul v-if="detailsAreVisible">
       <li>
         <strong>Phone:</strong>
@@ -37,6 +38,7 @@ export default {
       default: false
     }
   },
+  emits: ['toggle-parent', 'delete-friend'],
   data() {
     return {
       detailsAreVisible: false,
